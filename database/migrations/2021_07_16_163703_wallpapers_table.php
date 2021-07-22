@@ -25,6 +25,7 @@ class WallpapersTable extends Migration
             $table->foreign('id_user')->references('id')->on('users');
             $table->integer('width');
             $table->integer('height');
+            $table->timestamp('updated_at');
         });
     }
 

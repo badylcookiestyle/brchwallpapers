@@ -19,6 +19,15 @@ class CategoriesTable extends Migration
 
 
         });
+        DB::table('categories')->insert([
+            'name' =>"anime"
+        ]);
+        DB::table('categories')->insert([
+            'name' =>"video games"
+        ]);
+        DB::table('categories')->insert([
+            'name' =>"art"
+        ]);
     }
 
     /**
