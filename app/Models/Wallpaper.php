@@ -22,9 +22,9 @@ class Wallpaper extends Model
         $path = $request->file('file')->storeAs('', $imageName, 'public');
         $imagePath->move(public_path('\images\wallpapers'), $imageName);
         if ($request->type == "true") {
-            Wallpaper::insert(['name' => $imageName  , 'is_mobile' => 1, 'image_path' => $imageName , 'id_category' => $categoryId, "id_user" => Auth::id(), "width" => $width, "height" => $height]);
+            Wallpaper::insert(['name' => $imageName  , 'is_mobile' => 1, 'image_path' => $imageName ,  "id_user" => Auth::id(), "width" => $width, "height" => $height]);
         }
-        Wallpaper::insert(['name' => $imageName , 'is_mobile' => 0, 'image_path' => $imageName , 'id_category' => $categoryId, "id_user" => Auth::id(), "width" => $width, "height" => $height]);
+        Wallpaper::insert(['name' => $imageName , 'is_mobile' => 0, 'image_path' => $imageName , "id_user" => Auth::id(), "width" => $width, "height" => $height]);
         return response()->json(['success' => 'working']);
     }
 }

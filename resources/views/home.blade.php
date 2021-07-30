@@ -27,8 +27,8 @@
 
                         <select class="form-select" aria-label="Default select example" id="category">
 
-                          @foreach($categories as $category)
-                              <option value="{{$category->name}}">{{$category->name}}</option>
+                          @foreach($tags as $tagy)
+                              <option value="{{$tags->name}}">{{$tags->name}}</option>
                             @endforeach
                         </select>
                     </div>

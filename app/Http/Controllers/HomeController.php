@@ -29,7 +29,7 @@ class HomeController extends Controller
             return redirect("/admin");
         }
         //--- I decided that admin won't have access to this panel :)
-        $categories=db::table("categories")->get();
-        return view('home',["categories"=>$categories]);
+        $tags=db::table("tags")->get();
+        return view('home',["tags"=>$tags]);
     }
 }
